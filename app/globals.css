@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 213 100% 57%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 13%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 13%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 0 0% 13%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 13%;
+    --input: 0 0% 13%;
+    --ring: 213 100% 57%;
+
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Radial Gradient (Default) */
+.radial-gradient {
+  background: radial-gradient(
+    circle at top,
+    rgba(38, 138, 255, 1) 1%,
+    rgba(115, 115, 115, 0) 100%
+  );
+  opacity: 0.3;
+  filter: blur(40px);
+}
+
+/* Radial Gradient with Linear Color Combination */
+.linear-radial-gradient {
+  background: radial-gradient(
+    circle at center,
+    rgba(90, 215, 255, 0.75) 1%,
+    rgba(101, 107, 245, 0.75) 100%
+  );
+  opacity: 0.3;
+  filter: blur(40px);
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+  .radial-gradient,
+  .linear-radial-gradient {
+    opacity: 0.4;
+  }
+}
