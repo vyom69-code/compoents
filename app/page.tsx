@@ -1,6 +1,10 @@
-import { redirect } from "next/navigation"
+import DiscordLanding from "@/components/discord-landing";
+import Cards from "@/components/cards"; // Import with the correct name
 
 export default function Home() {
-  redirect("/signin")
+  return (
+    <>
+      <Cards /> {/* Render the Cards component */}
+    </>
+  );
 }
-
